@@ -1,0 +1,21 @@
+#include<stdio.h>
+#include<string.h>
+int main() {
+ 
+    char str[81];
+    int i, n, j, error;
+    scanf("%i", &error);
+    scanf("%s ", &str);
+ 
+    n = strlen(str);
+    error = error - 1;
+    for (i = 0, j = 0; i < n; i ++) {
+        if (i != error) {
+            str[j] = str[i];
+            j++;
+        }
+    }
+    str[j] = '\0';
+    printf("%s", str);
+    return 0;
+}
