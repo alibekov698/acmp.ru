@@ -1,0 +1,29 @@
+#include <iostream>
+using namespace std;
+int main(){
+ 
+    char c, i;
+    int n, j;
+    cin >> c >> n;
+ 
+    for(i = 'A'; i <= 'H'; i = i + 2){
+        if(i == c){
+            if(n % 2 == 0){
+                cout << "WHITE";
+            }
+            else if(n % 2 == 1){
+                cout << "BLACK";
+            }
+        }
+        else if(i+1 == c){
+            if(n % 2 == 1){
+                cout << "WHITE";
+            }
+            else if(n % 2 == 0){
+                cout << "BLACK";
+            }
+        }
+    }
+ 
+    return 0;
+}
