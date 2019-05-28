@@ -1,0 +1,46 @@
+#include <iostream>
+using namespace std;
+int main(){
+ 
+    int n, three = 0, four = 0;
+    cin >> n;
+ 
+    int a[n];
+ 
+    if(n >= 1 && n <= 100){
+        for(int i = 0; i < n; i++){
+            cin >> a[i];
+        }
+ 
+        for(int i = 0; i < n; i++){
+            if(a[i] >= 1 && a[i] <= 31){
+                if(a[i] % 2 == 1){
+                    cout << a[i] << " ";
+                    three++;
+                }
+            }
+        }
+ 
+        cout << "\n";
+ 
+        for(int i = 0; i < n; i++){
+            if(a[i] >= 1 && a[i] <= 31){
+                if(a[i] % 2 == 0){
+                    cout << a[i] << " ";
+                    four++;
+                }
+            }
+        }
+ 
+        cout << "\n";
+ 
+        if(four >= three){
+            cout << "YES";
+        }
+        else if(four < three){
+            cout << "NO";
+        }
+    }
+ 
+    return 0;
+}
