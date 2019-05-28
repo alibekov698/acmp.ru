@@ -1,0 +1,40 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main(){
+ 
+    string s;
+    cin >> s;
+    int l = s.length(), num = 1;
+ 
+    for(int i = 0; i < l; i++){
+        if(s[i] == 'A'){
+            if(num == 1){
+                num++;
+            }
+            else if(num == 2){
+                num--;
+            }
+        }
+        else if(s[i] == 'B'){
+            if(num == 2){
+                num++;
+            }
+            else if(num == 3){
+                num--;
+            }
+        }
+        else if(s[i] == 'C'){
+            if(num == 1){
+                num = num + 2;
+            }
+            else if(num == 3){
+                num = num - 2;
+            }
+        }
+    }
+ 
+    cout << num;
+ 
+    return 0;
+}
