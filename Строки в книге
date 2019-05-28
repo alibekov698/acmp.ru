@@ -1,0 +1,17 @@
+#include <iostream>
+using namespace std;
+int main(){
+ 
+    int a, b;
+    cin >> a >> b;
+ 
+    if(a >= 1 && a <= 200 && b >= 1 && b <= 20000){
+        if(b % a != 0){
+            cout << (b / a) + 1 << " " << b % a;
+        } else {
+            cout << b / a<< " " << a;
+        }
+    }
+ 
+    return 0;
+}
