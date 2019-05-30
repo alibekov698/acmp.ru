@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+int main(){
+ 
+    int x1, y1, x2, y2;
+    cin >> x1 >> y1 >> x2 >> y2;
+ 
+    if(y1 % 2 == 1 && x1 % 2 == 1){
+        if(y2 % 2 == 1 && x2 % 2 == 1){
+            cout << "YES";
+        }
+        else if(y2 % 2 == 0 && x2 % 2 == 0){
+            cout << "YES";
+        } else  {
+            cout << "NO";
+        }
+    }
+    else if(y1 % 2 == 0 && x1 % 2 == 0){
+        if(y2 % 2 == 0 && x2 % 2 == 0){
+            cout << "YES";
+        }
+        else if(y2 % 2 == 1 && x2 % 2 == 1){
+            cout << "YES";
+        } else  {
+            cout << "NO";
+        }
+    }
+    else if(y1 % 2 == 1 && x1 % 2 == 0){
+        if(y2 % 2 == 1 && x2 % 2 == 0){
+            cout << "YES";
+        }
+        else if(y2 % 2 == 0 && x2 % 2 == 1){
+            cout << "YES";
+        } else  {
+            cout << "NO";
+        }
+    }
+    else if(y1 % 2 == 0 && x1 % 2 == 1){
+        if(y2 % 2 == 0 && x2 % 2 == 1){
+            cout << "YES";
+        }
+        else if(y2 % 2 == 1 && x2 % 2 == 0){
+            cout << "YES";
+        } else  {
+            cout << "NO";
+        }
+    }
+ 
+    return 0;
+}
