@@ -1,0 +1,30 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main(){
+ 
+    string s;
+    cin >> s;
+    int l = s.length();
+    int num = 0;
+ 
+    for(int k = 0; k < l; k++){
+        if(s[k] == '0'){
+            num++;
+        }
+        else if(s[k] == '1'){
+                 
+            int n = 0;
+         
+            for(char i = 'a'; i <= 'z'; i++, n++){
+                if(num == n){
+                    cout << i;
+                    num = 0;
+                    break;
+                }
+            }
+        }
+    }
+ 
+    return 0;
+}
