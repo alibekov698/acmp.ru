@@ -1,0 +1,35 @@
+#include <iostream>
+using namespace std;
+int main(){
+ 
+    int n, m, y, x, number = 0;
+    cin >> n >> m >> y >> x;
+ 
+    int a[n][m];
+    int  col = m;
+ 
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < col; j++){
+            if(i == 0 || i % 2 == 0){
+                a[i][j] = number;
+                number++;
+            }
+            else if(i == 1 || i % 2 == 1){
+                a[i][j] = (number - 1) + m;
+                number++;
+                m = m - 2;
+            }
+        }
+        m = col;
+    }
+ 
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < col; j++){
+            if(a[i][j] == a[y-1][x-1]){
+                cout << a[i][j];
+            }
+        }
+    }
+ 
+    return 0;
+}
