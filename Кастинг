@@ -1,0 +1,50 @@
+#include <iostream>
+using namespace std;
+int main(){
+ 
+    int k;
+    int n, a, b, c;
+    cin >> k;
+    cin >> n >> a >> b >> c;
+ 
+    int temp;
+    int temp1;
+    for(int i = 0; i < 3; i++){
+        if(a > b){
+            temp = b;
+            b = a;
+            a = temp;
+        }
+ 
+        if(b > c){
+            temp1 = c;
+            c = b;
+            b = temp1;
+        }
+    }
+ 
+    if(k == 1){
+        if(n - c > 0){
+            int d = n - c;
+            a = a - d;
+        }
+ 
+        if(n - b > 0){
+            int d1 = n - b;
+            a = a - d1;
+        }
+ 
+        if(a <= 0){
+            cout << "0";
+        }
+        else if(a > 0){
+            cout << a;
+        }
+    }
+    else if(k == 2){
+        int dx = n - a;
+        cout << n - dx;
+    }
+ 
+    return 0;
+}
