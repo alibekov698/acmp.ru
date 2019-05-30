@@ -1,0 +1,41 @@
+#include <iostream>
+using namespace std;
+int main(){
+ 
+    int r, c, i, j, k;
+    cin >> r >> c >> i >> j >> k;
+ 
+    if(k == 0 && r % 2 == 1 && c % 2 == 1){
+        if(i % 2 == 1 && j % 2 == 1){
+            cout << "black";
+        }
+        else if(i % 2 == 0 && j % 2 == 0){
+            cout << "black";
+        }
+        else if(i % 2 == 1 && j % 2 == 0){
+            cout << "white";
+        }
+        else if(i % 2 == 0 && j % 2 == 1){
+            cout << "white";
+        }
+    }
+    else if(k == 1 && r % 2 == 1 && c % 2 == 1){
+        if(i % 2 == 1 && j % 2 == 1){
+            cout << "white";
+        }
+        else if(i % 2 == 0 && j % 2 == 0){
+            cout << "white";
+        }
+        else if(i % 2 == 1 && j % 2 == 0){
+            cout << "black";
+        }
+        else if(i % 2 == 0 && j % 2 == 1){
+            cout << "black";
+        }
+    }
+    else if(r % 2 == 0 || c % 2 == 0){
+        cout << "equal";
+    }
+ 
+    return 0;
+}
