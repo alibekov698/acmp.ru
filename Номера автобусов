@@ -1,0 +1,57 @@
+#include <iostream>
+using namespace std;
+int main(){
+ 
+    int n, num = 0;
+    cin >> n;
+    string s;
+ 
+    for(int i = 0; i < n; i++){
+ 
+        cin >> s;
+        int l = s.length();
+        if(l == 6){
+            if(s[0]=='A' || s[0]=='B' || s[0]=='C' || s[0]=='E'){
+                num++;
+            }
+            else if(s[0]=='H' || s[0]=='K' || s[0]=='M' || s[0]=='O'){
+                num++;
+            }
+            else if(s[0]=='P' || s[0]=='T' || s[0]=='X' || s[0]=='Y'){
+                num++;
+            }
+ 
+            for(int j = 1; j < 4; j++){
+                if(s[j]=='1' || s[j]=='2' || s[j]=='3' || s[j]=='4'){
+                    num++;
+                }
+                else if(s[j]=='5' || s[j]=='6' || s[j]=='7' || s[j]=='8'){
+                    num++;
+                }
+                else if(s[j]=='9' || s[j]=='0'){
+                    num++;
+                }
+            }
+            for(int k = 4; k < 7; k++){
+                if(s[k]=='A' || s[k]=='B' || s[k]=='C' || s[k]=='E'){
+                    num++;
+                }
+                else if(s[k]=='H' || s[k]=='K' || s[k]=='M' || s[k]=='O'){
+                    num++;
+                }
+                else if(s[k]=='P' || s[k]=='T' || s[k]=='X' || s[k]=='Y'){
+                    num++;
+                }
+            }
+        }
+        if(num == 6){
+            cout << "Yes" << "\n";
+        } else {
+            cout << "No" << "\n";
+        }
+        num = 0;
+    }
+ 
+ 
+    return 0;
+}
