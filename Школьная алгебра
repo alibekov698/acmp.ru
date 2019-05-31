@@ -1,0 +1,225 @@
+#include <iostream>
+using namespace std;
+int main(){
+ 
+    int a, b, c;
+    cin >> a >> b >> c;
+ 
+    if(a > 0 || a < 0){
+        if(b > 1){
+            if(c > 0){
+                if(c > 1){
+                    cout <<a<<'+'<<b<<'x'<<'+'<<c<<'y';
+                }
+                else if(c == 1){
+                    cout <<a<<'+'<<b<<'x'<<'+'<<'y';
+                }
+            }
+            else if(c < 0){
+                if(c < -1){
+                    cout <<a<<'+'<<b<<'x'<<c<<'y';
+                }
+                else if(c == -1){
+                    cout <<a<<'+'<<b<<'x'<<'-'<<'y';
+                }
+            }
+            else if(c == 0){
+                cout <<a<<'+'<<b<<'x';
+            }
+        }
+        else if(b < -1){
+            if(c > 0){
+                if(c > 1){
+                    cout <<a<<b<<'x'<<'+'<<c<<'y';
+                }
+                else if(c == 1){
+                    cout <<a<<b<<'x'<<'+'<<'y';
+                }
+            }
+            else if(c < 0){
+                if(c < -1){
+                    cout <<a<<b<<'x'<<c<<'y';
+                }
+                else if(c == -1){
+                    cout <<a<<b<<'x'<<'-'<<'y';
+                }
+            }
+            else if(c == 0){
+                cout <<a<<b<<'x';
+            }
+        }
+        else if(b == 1){
+            if(c > 0){
+                if(c > 1){
+                    cout <<a<<'+'<<'x'<<'+'<<c<<'y';
+                }
+                else if(c == 1){
+                    cout <<a<<'+'<<'x'<<'+'<<'y';
+                }
+            }
+            else if(c < 0){
+                if(c < -1){
+                    cout <<a<<'+'<<'x'<<c<<'y';
+                }
+                else if(c == -1){
+                    cout <<a<<'+'<<'x'<<'-'<<'y';
+                }
+            }
+            else if(c == 0){
+                cout <<a<<'+'<<'x';
+            }
+        }
+        else if(b == -1){
+            if(c > 0){
+                if(c > 1){
+                    cout <<a<<'-'<<'x'<<'+'<<c<<'y';
+                }
+                else if(c == 1){
+                    cout <<a<<'-'<<'x'<<'+'<<'y';
+                }
+            }
+            else if(c < 0){
+                if(c < -1){
+                    cout <<a<<'-'<<'x'<<c<<'y';
+                }
+                else if(c == -1){
+                    cout <<a<<'-'<<'x'<<'-'<<'y';
+                }
+            }
+            else if(c == 0){
+                cout <<a<<'-'<<'x';
+            }
+        }
+        else if(b == 0){
+            if(c > 0){
+                if(c > 1){
+                    cout <<a<<'+'<<c<<'y';
+                }
+                else if(c == 1){
+                    cout <<a<<'+'<<'y';
+                }
+            }
+            else if(c < 0){
+                if(c < -1){
+                    cout <<a<<c<<'y';
+                }
+                else if(c == -1){
+                    cout <<a<<'-'<<'y';
+                }
+            }
+            else if(c == 0){
+                cout <<a;
+            }
+        }
+    }
+ 
+    else if(a == 0){
+        if(b > 1){
+            if(c > 0){
+                if(c > 1){
+                    cout <<b<<'x'<<'+'<<c<<'y';
+                }
+                else if(c == 1){
+                    cout <<b<<'x'<<'+'<<'y';
+                }
+            }
+            else if(c < 0){
+                if(c < -1){
+                    cout <<b<<'x'<<c<<'y';
+                }
+                else if(c == -1){
+                    cout <<b<<'x'<<'-'<<'y';
+                }
+            }
+            else if(c == 0){
+                cout <<b<<'x';
+            }
+        }
+        else if(b < -1){
+            if(c > 0){
+                if(c > 1){
+                    cout <<b<<'x'<<'+'<<c<<'y';
+                }
+                else if(c == 1){
+                    cout <<b<<'x'<<'+'<<'y';
+                }
+            }
+            else if(c < 0){
+                if(c < -1){
+                    cout <<b<<'x'<<c<<'y';
+                }
+                else if(c == -1){
+                    cout <<b<<'x'<<'-'<<'y';
+                }
+            }
+            else if(c == 0){
+                cout <<b<<'x';
+            }
+        }
+        else if(b == 1){
+            if(c > 0){
+                if(c > 1){
+                    cout <<'x'<<'+'<<c<<'y';
+                }
+                else if(c == 1){
+                    cout <<'x'<<'+'<<'y';
+                }
+            }
+            else if(c < 0){
+                if(c < -1){
+                    cout <<'x'<<c<<'y';
+                }
+                else if(c == -1){
+                    cout <<'x'<<'-'<<'y';
+                }
+            }
+            else if(c == 0){
+                cout <<'x';
+            }
+        }
+        else if(b == -1){
+            if(c > 0){
+                if(c > 1){
+                    cout <<'-'<<'x'<<'+'<<c<<'y';
+                }
+                else if(c == 1){
+                    cout <<'-'<<'x'<<'+'<<'y';
+                }
+            }
+            else if(c < 0){
+                if(c < -1){
+                    cout <<'-'<<'x'<<c<<'y';
+                }
+                else if(c == -1){
+                    cout <<'-'<<'x'<<'-'<<'y';
+                }
+            }
+            else if(c == 0){
+                cout <<'-'<<'x';
+            }
+        }
+        else if(b == 0){
+            if(c > 0){
+                if(c > 1){
+                    cout <<'+'<<c<<'y';
+                }
+                else if(c == 1){
+                    cout <<'+'<<'y';
+                }
+            }
+            else if(c < 0){
+                if(c < -1){
+                    cout <<c<<'y';
+                }
+                else if(c == -1){
+                    cout <<'-'<<'y';
+                }
+            }
+            else if(c == 0){
+                cout <<'0';
+            }
+        }
+    }
+ 
+    return 0;
+}
