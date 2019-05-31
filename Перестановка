@@ -1,0 +1,52 @@
+#include <iostream>
+#include <string>
+using namespace std;
+int main(){
+ 
+    string o, s;
+    cin >> o >> s;
+    int lo = o.length();
+    int ls = s.length();
+    int numo = 0, nums = 0, cor = 0;
+ 
+    if(lo == ls){
+        for(int i = 0; i < lo; i++){
+            for(int j = 0; j < lo; j++){
+ 
+                int b = int(o[j]);
+                b = b + 32;
+                int c = int(o[j]);
+                c = c - 32;
+ 
+                if(o[i] == o[j] || o[i] == char(b) || o[i] == char(c)){
+                    numo++;
+                }
+            }
+            for(int k = 0; k < ls; k++){
+ 
+                int b = int(s[k]);
+                b = b + 32;
+                int c = int(s[k]);
+                c = c - 32;
+ 
+                if(o[i] == s[k] || o[i] == char(b) || o[i] == char(c)){
+                    nums++;
+                }
+            }
+            if(nums == numo){
+                cor++;
+            }
+        }
+        if(cor == lo){
+            cout << "Yes";
+        }
+        else {
+            cout << "No";
+        }
+    }
+    else if(lo != ls){
+        cout << "No";
+    }
+     
+    return 0;
+}
