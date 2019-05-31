@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+int main(){
+ 
+    int n, n1;
+    char c1, c2, c3, c4, c5;
+    cin >> c1 >> c2 >> c3 >> c4 >> c5;
+ 
+    if(c1 == 'x'){
+        if(c2 == '+'){
+            n = c3 - '0';
+            n1 = c5 - '0';
+            cout << n1 - n;
+        }
+        else if(c2 == '-'){
+            n = c3 - '0';
+            n1 = c5 - '0';
+            cout << n1 + n;
+        }
+    }
+    else if(c3 == 'x'){
+        if(c2 == '+'){
+            n = c1 - '0';
+            n1 = c5 - '0';
+            cout << n1 - n;
+        }
+        else if(c2 == '-'){
+            n = c1 - '0';
+            n1 = c5 - '0';
+            cout << -(n1 - n);
+        }
+    }
+    else if(c5 == 'x'){
+        if(c2 == '+'){
+            n = c1 - '0';
+            n1 = c3 - '0';
+            cout << n1 + n;
+        }
+        else if(c2 == '-'){
+            n = c1 - '0';
+            n1 = c3 - '0';
+            cout << n - n1;
+        }
+    }
+ 
+    return 0;
+}
