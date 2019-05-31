@@ -1,0 +1,42 @@
+#include <iostream>
+#include <string.h>
+using namespace std;
+int main ()
+{
+    int n;
+    cin >> n;
+    string s[n];
+    for (int i = 0; i < n; i ++)
+        cin >> s[i];
+ 
+    int m, cnt = 0, same = 0;
+    cin >> m;
+    string c[m];
+    for (int i = 0; i < m; i ++)
+        cin >> c[i];
+ 
+    for (int i = 0; i < n; i ++)
+    {
+        for (int j = 0; j < m; j ++)
+        {
+            int l_s = s[i].size(), l_c = c[j].size();
+ 
+            if (l_s == l_c)
+            {
+                char s_array [l_s + 1], c_array [l_c + 1];
+                strcpy(s_array, s[i].c_str());
+                strcpy(c_array, c[j].c_str());
+ 
+                for (int t = 0; t < l_s; t ++)
+                    if (s_array[t] == c_array[t])
+                        cnt ++;
+                if (cnt == l_s - 1)
+                    same ++;
+            }
+            cnt = 0;
+        }
+        cout << same << " ";
+        same = 0;
+    }
+    return 0;
+}
