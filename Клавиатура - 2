@@ -1,0 +1,38 @@
+#include <iostream>
+using namespace std;
+int main(){
+ 
+    int n, c = 0;
+    cin >> n;
+    int a[n];
+ 
+    for(int i = 0; i < n; i++){
+        cin >> a[i];
+    }
+ 
+    int p;
+    cin >> p;
+    int num[p];
+ 
+    for(int i = 0; i < p; i++){
+        cin >> num[i];
+    }
+ 
+ 
+    for(int i = 0; i < n; i++){
+        for(int j = 0; j < p; j++){
+            if(i + 1 == num[j]){
+                c++;
+            }
+        }
+        if(a[i] >= c){
+            cout << "no" << "\n";
+        }
+        else if(a[i] < c){
+            cout << "yes" << "\n";
+        }
+        c = 0;
+    }
+ 
+    return 0;
+}
