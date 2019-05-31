@@ -1,0 +1,19 @@
+#include <iostream>
+#include <iomanip>
+using namespace std;
+int main ()
+{
+    int N, V, L;
+    cin >> N >> V >> L;
+    float x[N], t[N];
+    for (int i = 0; i < N; i ++)
+        cin >> x[i] >> t[i];
+    float fact_time = L * 60.00 / V;
+    int spend_time = 0;
+    for (int i = 0; i < N; i ++)
+        spend_time = t[i] + spend_time;
+    fact_time = fact_time + spend_time;
+    cout << fixed << showpoint;
+    cout << setprecision(2) << fact_time;
+    return 0;
+}
