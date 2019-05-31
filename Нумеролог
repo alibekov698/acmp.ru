@@ -1,0 +1,34 @@
+#include <iostream>
+#include <sstream>
+using namespace std;
+int main ()
+{
+    long long int sum = 0, cnt = 0;
+    string s;
+    cin >> s;
+    if (s.size() > 1)
+    {
+        for (size_t i = 0; i < s.size(); i ++)
+        {
+            char ch = s[i];
+            int t = ch - '0';
+            sum = sum + t;
+            if (i + 1 == s.size() && sum > 9)
+            {
+                cnt ++;
+                stringstream new_string;
+                new_string << sum;
+                s = new_string.str();
+                sum = 0;
+                i = -1;
+            }
+ 
+            if (i + 1 == s.size())
+                cnt ++;
+        }
+        cout << sum << " " << cnt;
+    }
+    else
+        cout << s << " " << 0;
+    return 0;
+}
