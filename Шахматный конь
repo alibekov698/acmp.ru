@@ -1,0 +1,47 @@
+#include <iostream>
+#include <sstream>
+using namespace std;
+int main(){
+ 
+    char c;
+    int n;
+    cin >> c >> n;
+ 
+    if(char(c - 2) >= 'a'){
+        if(n - 1 >= 1){
+            cout << char(c - 2) << n - 1;
+        }
+        if(n + 1 <= 8){
+            cout << "\n" << char(c - 2) << n + 1;
+        }
+    }
+ 
+    if(char(c - 1) >= 'a'){
+        if(n - 2 >= 1){
+            cout << "\n" << char(c - 1) << n - 2;
+        }
+        if(n + 2 <= 8){
+            cout << "\n" << char(c - 1) << n + 2;
+        }
+    }
+ 
+    if(char(c + 1) <= 'h'){
+        if(n - 2 >= 1){
+            cout << "\n" << char(c + 1) << n - 2;
+        }
+        if(n + 2 <= 8){
+            cout << "\n" << char(c + 1) << n + 2;
+        }
+    }
+ 
+    if(char(c + 2) <= 'h'){
+        if(n - 1 >= 1){
+            cout << "\n" << char(c + 2) << n - 1;
+        }
+        if(n + 1 <= 8){
+            cout << "\n" << char(c + 2) << n + 1;
+        }
+    }
+ 
+    return 0;
+}
