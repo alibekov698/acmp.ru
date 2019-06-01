@@ -1,0 +1,47 @@
+#include <iostream>
+using namespace std;
+int main(){
+ 
+    int n, sum = 0;
+    int a = 0, b = 0;
+    cin >> n;
+ 
+    if(n != 0){
+        for(int j = 0; j < 1000; j++){
+            if(sum == n){
+                break;
+            }
+            a++;
+            if(sum != n){
+                sum = sum + a + b;
+            }
+            if(sum == n){
+                break;
+            }
+            if(sum != n){
+                if(a - b == 1){
+                    b++;
+                    if(sum != n){
+                        sum = sum + a + b;
+                    }
+                    if(sum == n){
+                        break;
+                    }
+                    if(a == b){
+                        b++;
+                        if(sum != n){
+                            sum = sum + a + b;
+                        }
+                        if(sum == n){
+                            break;
+                        }
+                    }
+                }
+            }
+        }
+    }
+ 
+    cout << a + b;
+ 
+    return 0;
+}
