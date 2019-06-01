@@ -1,0 +1,20 @@
+#include <iostream>
+#include <math.h>
+using namespace std;
+int main ()
+{
+    double d, sum = 0.00;
+    cin >> d;
+    int cards = 0;
+    long long int i = 2;
+    while (true)
+    {
+        if (d <= sum)
+            break;
+        sum = sum + (1 / (i * 1.00));
+        cards ++;
+        i ++;
+    }
+    cout << cards << " card(s)";
+    return 0;
+}
