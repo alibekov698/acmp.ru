@@ -1,0 +1,32 @@
+#include <iostream>
+using namespace std;
+int main ()
+{
+    long long int sum_odd = 0, sum_even = 0;
+    string s;
+    cin >> s;
+    long long int len = s.size();
+    for (int i = 0; i < len; i ++)
+    {
+        if (i % 2 == 1)
+        {
+            char ch = s[i];
+            int t = ch - '0';
+            sum_even = sum_even + t;
+        }
+        else if (i % 2 == 0)
+        {
+            char ch = s[i];
+            int t = ch - '0';
+            sum_odd = sum_odd + t;
+        }
+    }
+ 
+    int ans = sum_even - sum_odd;
+    if (ans % 11 == 0)
+        cout << "YES";
+    else if (ans % 11 != 0)
+        cout << "NO";
+ 
+    return 0;
+}
