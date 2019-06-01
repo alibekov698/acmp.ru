@@ -1,0 +1,22 @@
+#include <iostream>
+using namespace std;
+int main(){
+ 
+    int n;
+    cin >> n;
+ 
+    if(n - 8 >= 1){
+        cout << n - 8 << " ";
+    }
+    if(n - 1 >= 1 && n != 9 && n != 17 && n != 25 && n != 33 && n != 41 && n != 49 && n != 57){
+        cout << n - 1 << " ";
+    }
+    if(n + 1 <= 64 && n != 56 && n != 48 && n != 40 && n != 32 && n != 24 && n != 16 && n != 8){
+        cout << n + 1 << " ";
+    }
+    if(n + 8 <= 64){
+        cout << n + 8 << " ";
+    }
+ 
+    return 0;
+}
